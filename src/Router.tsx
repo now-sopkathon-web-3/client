@@ -10,7 +10,7 @@ const Router = () => {
     },
   ]);
 
-  return <RouterProvider router={routerData}></RouterProvider>;
+  return <RouterProvider router={routerData} />;
 };
 
 export default Router;
