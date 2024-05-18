@@ -6,11 +6,12 @@ import SuccessPage from '@pages/record/SuccessPage';
 import FailPage from '@pages/record/FailPage';
 import Ranking from '@pages/ranking/Ranking';
 import History from '@pages/history/History';
+import My from './pages/My/My';
 
 const Router = () => {
   const routerData = createBrowserRouter([
     {
-      path: '/:memberId',
+      path: '/',
       element: <Home />,
     },
     {
@@ -32,6 +33,10 @@ const Router = () => {
     {
       path: '/history/:id',
       element: <History />,
+    },
+    {
+      path: '/my/:memberId',
+      element: <My />,
     },
   ]);
 

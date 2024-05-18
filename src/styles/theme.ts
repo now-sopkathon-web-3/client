@@ -15,6 +15,7 @@ const color = {
   gray800: '#1F2937',
   gray900: '#111827',
   main: '#09D17D',
+  sub: '#F0C419',
   bg: '#A4E1F4',
   sub: '#F0C419',
 };
