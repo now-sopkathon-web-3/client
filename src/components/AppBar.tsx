@@ -1,14 +1,23 @@
 import styled from 'styled-components';
 import BackIcon from '@assets/icn_back.svg';
+import { useNavigate } from 'react-router-dom';
 
 interface AppBarProps {
   title: string;
 }
 
 function AppBar({ title }: AppBarProps) {
+  const navigate = useNavigate();
+
+  const goBack = () => {
+    navigate(-1); // 이전 페이지로 이동
+  };
+
   return (
     <AppBarLayout>
-      <BackIcon />
+      <BackIconWrapper onClick={goBack}>
+        <BackIcon />
+      </BackIconWrapper>
       <AppBarTitle>{title}</AppBarTitle>
     </AppBarLayout>
   );
@@ -22,7 +31,6 @@ const AppBarLayout = styled.div`
   display: flex;
   justify-content: space-between;
   background-color: ${({ theme }) => theme.color.bg};
-  padding-left: 2rem;
   background-color: none;
   position: sticky;
 `;
@@ -33,4 +41,8 @@ const AppBarTitle = styled.h1`
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+`;
+
+const BackIconWrapper = styled.button`
+  margin-left: 2rem;
 `;
