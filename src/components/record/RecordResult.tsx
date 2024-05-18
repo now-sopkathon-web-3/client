@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 
 interface RecordResultProps {
@@ -8,11 +8,12 @@ interface RecordResultProps {
 }
 
 const RecordResult = (props: RecordResultProps) => {
+  const { memberId } = useParams();
   const { src, alt, content } = props;
   const navigate = useNavigate();
 
   const handleHomeBtn = () => {
-    navigate('/');
+    navigate(`/${memberId}`);
   };
   return (
     <RecordResultWrapper>

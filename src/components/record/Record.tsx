@@ -1,14 +1,15 @@
-import React, { useState, ChangeEvent, MouseEvent } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, ChangeEvent } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import Axios from 'src/api/config';
 import styled from 'styled-components';
 import Back from 'src/assets/icn_back.svg';
 
 const Record: React.FC = () => {
+  const { memberId } = useParams<{ memberId: string }>();
   const [image, setImage] = useState<string | null>(null);
   const [file, setFile] = useState<File | null>(null);
   const [text, setText] = useState<string>('');
-  const [success, setSuccess] = useState(true);
+  const [success, setSuccess] = useState<boolean>(true);
   const navigate = useNavigate();
 
   const handleImg = (event: ChangeEvent<HTMLInputElement>) => {
@@ -33,13 +34,12 @@ const Record: React.FC = () => {
 
     Axios.post('/histories', formData, {
       headers: {
-        Authorization: 1,
+        Authorization: `${memberId}`,
       },
     })
       .then((result) => {
-        console.log('요청성공', result);
         setFile(null);
-        navigate(isSuccess ? '/record/success' : '/record/fail');
+        navigate(isSuccess ? `/record/success/${memberId}` : `/record/fail/${memberId}`);
       })
       .catch((error) => {
         console.error('요청실패', error);
@@ -51,12 +51,16 @@ const Record: React.FC = () => {
   };
 
   const handleIsSuccess = (isSuccess: boolean) => {
-    setSuccess(!success);
+    setSuccess(isSuccess);
+  };
+
+  const handleHomeBtn = () => {
+    navigate(`/${memberId}`);
   };
 
   return (
     <RecordWrapper>
-      <BackIcon />
+      <BackIcon onClick={handleHomeBtn} />
       <Title>기록</Title>
       <ButtonContainer>
         <Btn $isTrue={success} border={true} onClick={() => handleIsSuccess(true)}>
@@ -86,8 +90,7 @@ const RecordWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  padding: 0, 2rem;
+  padding: 0 2rem;
 `;
 
 const BackIcon = styled(Back)`
@@ -102,24 +105,18 @@ const Title = styled.p`
   text-align: center;
   font-family: Inter;
   font-size: 18px;
-  font-style: normal;
   font-weight: 400;
   line-height: normal;
-
   margin-top: 2.9rem;
 `;
 
 const FileInfo = styled.input`
-  display: flex;
   width: 335px;
   height: 48px;
-  padding: 13px 166.75px 13px 24px;
-  align-items: center;
-  flex-shrink: 0;
+  padding: 13px 24px;
   border-radius: 8px;
-  border: 0.75px solid var(--gray-400, #9ca3af);
-  background: var(--gray-white, #fff);
-
+  border: 0.75px solid #9ca3af;
+  background: #fff;
   margin-top: 1.2rem;
 `;
 
@@ -129,7 +126,6 @@ const ButtonContainer = styled.div`
   justify-content: center;
   width: 100%;
   gap: 1.3rem;
-
   margin-top: 4.1rem;
 `;
 
@@ -140,20 +136,14 @@ const Btn = styled.button<{ $isTrue: boolean; border: boolean }>`
   justify-content: center;
   align-items: center;
   gap: 10px;
-  flex-shrink: 0;
   border-radius: 8px;
-
   border: 1px solid ${({ border, theme }) => (border ? theme.color.main : '#E72121')};
   color: ${({ $isTrue, theme }) => ($isTrue ? theme.color.white : theme.color.gray400)};
   background: ${({ $isTrue, border, theme }) => ($isTrue ? (border ? theme.color.main : '#E72121') : 'transparent')};
-  text-align: center;
-
-  /* Text/Subtitle 1 */
   font-family: Pretendard;
   font-size: 16px;
-  font-style: normal;
   font-weight: 600;
-  line-height: 140%; /* 22.4px */
+  line-height: 140%;
   letter-spacing: 0.064px;
 `;
 
@@ -162,62 +152,46 @@ const ImgContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
   width: 335px;
   height: 335px;
-  flex-shrink: 0;
   border-radius: 8px;
-  background: var(--gray-200, #e5e7eb);
+  background: #e5e7eb;
   margin-top: 1.2rem;
 `;
 
 const InputText = styled.div``;
 
 const UploadFile = styled.input`
-  position: relative;
-  z-index: 1;
-
-  &::file-selector-button {
-    cursor: pointer;
-  }
-
+  position: absolute;
+  width: 100%;
+  height: 100%;
   opacity: 0;
+  cursor: pointer;
 `;
 
 const ImagePreview = styled.img`
   position: absolute;
-
   width: 100%;
   height: 100%;
-
   border-radius: 8px;
-  background: var(--gray-200, #e5e7eb);
+  background: #e5e7eb;
 `;
 
 const UploadBtn = styled.button`
-  display: flex;
   width: 335px;
   height: 48px;
-  padding: 11px 133px;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
   border-radius: 8px;
-  background: var(--gray-400, #9ca3af);
-
-  color: var(--gray-white, #fff);
-  text-align: center;
-
-  /* Text/Subtitle 1 */
+  background: #9ca3af;
+  color: #fff;
   font-family: Pretendard;
   font-size: 16px;
-  font-style: normal;
   font-weight: 600;
-  line-height: 140%; /* 22.4px */
+  line-height: 140%;
   letter-spacing: 0.064px;
-
   margin-top: 1.8rem;
+
   &:hover {
     background: ${({ theme }) => theme.color.main};
   }

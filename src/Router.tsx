@@ -8,19 +8,19 @@ import FailPage from '@pages/record/FailPage';
 const Router = () => {
   const routerData = createBrowserRouter([
     {
-      path: '/',
+      path: '/:memberId',
       element: <Home />,
     },
     {
-      path: '/record',
+      path: '/record/:memberId',
       element: <RecordPage />,
     },
     {
-      path: '/record/success',
+      path: '/record/success/:memberId',
       element: <SuccessPage />,
     },
     {
-      path: '/record/fail',
+      path: '/record/fail/:memberId',
       element: <FailPage />,
     },
   ]);
