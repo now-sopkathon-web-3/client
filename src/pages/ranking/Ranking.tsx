@@ -1,10 +1,12 @@
 import styled from 'styled-components';
-import RankingContent from './_components/RankingContent';
+import RankingList from './_components/RankingList';
+import AppBar from '@components/AppBar';
 
 function Ranking() {
   return (
     <RankingLayout>
-      <RankingContent name="이채원" islandNum={1} date={11} />
+      <AppBar title="랭킹" />
+      <RankingList />
     </RankingLayout>
   );
 }
@@ -14,4 +16,5 @@ export default Ranking;
 const RankingLayout = styled.div`
   height: 100vh;
   width: 100vw;
+  background-color: beige;
 `;
