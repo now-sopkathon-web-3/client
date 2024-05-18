@@ -55,16 +55,16 @@
     </tr>
     <tr align="center">
        <td>
-            뷰 이름 <br/>
+            로그인/히스토리 뷰 <br/>
       </td>
        <td>
-            뷰 이름 <br/>
+            사진 업로드 뷰 <br/>
       </td>
        <td>
-            뷰 이름 <br/>
+            랭킹 뷰 <br/>
       </td>
       <td>
-            뷰 이름 <br/>
+            홈 뷰 <br/>
       </td>
     </tr>
   	<tr align="center">
