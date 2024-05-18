@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
-import Chap from '@assets/fonts/chab.ttf';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
