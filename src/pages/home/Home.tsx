@@ -1,9 +1,8 @@
 import Logo from '@assets/logo.svg';
-import Icon from '@components/Icon';
-import { icons } from '@styles/icons';
 import { useEffect } from 'react';
 import { getTestApi } from 'src/api';
 import styled from 'styled-components';
+import Login from './Login';
 
 const home = () => {
   useEffect(() => {
@@ -17,9 +16,11 @@ const home = () => {
 
   return (
     <div>
-      <BigText>home</BigText>
+      {/* <BigText>home</BigText>
       <LogoImgBig />
-      <Icon icon={icons.search} />
+      <Icon icon={icons.search} /> */}
+
+      <Login />
     </div>
   );
 };
