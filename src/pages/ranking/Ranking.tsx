@@ -19,8 +19,6 @@ function Ranking() {
 
       const data = response.data;
 
-      console.log('hi', data);
-
       setRank(data.myRank);
       setRankArr(data.rank);
     };

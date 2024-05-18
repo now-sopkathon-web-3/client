@@ -40,6 +40,7 @@ const RankingContentNum = styled.p`
 `;
 
 const RankingContentName = styled.p`
+  width: 12.5rem;
   ${({ theme }) => theme.fonts.body4};
   color: ${({ theme }) => theme.color.black};
   margin-left: 0.8rem;
@@ -48,6 +49,4 @@ const RankingContentName = styled.p`
 const ButtonWrapper = styled.div`
   gap: 0.4rem;
   display: flex;
-  position: fixed;
-  right: 3rem;
 `;
