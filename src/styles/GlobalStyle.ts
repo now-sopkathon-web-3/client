@@ -4,6 +4,7 @@ import reset from 'styled-reset';
 const GlobalStyle = createGlobalStyle`
   ${reset}
 
+ 
   html,
   body,
   div,
