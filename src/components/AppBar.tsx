@@ -26,13 +26,15 @@ function AppBar({ title }: AppBarProps) {
 export default AppBar;
 
 const AppBarLayout = styled.div`
+  width: 100%;
   height: 7.6rem;
   align-items: center;
   display: flex;
   justify-content: space-between;
-  background-color: ${({ theme }) => theme.color.bg};
+  background-color: ${({ theme }) => theme.color.white};
   background-color: none;
-  position: sticky;
+  position: fixed;
+  top: 0;
 `;
 
 const AppBarTitle = styled.h1`

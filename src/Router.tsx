@@ -2,6 +2,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 import Home from './pages/home/Home';
 import Ranking from '@pages/ranking/Ranking';
+import History from '@pages/history/History';
 
 const Router = () => {
   const routerData = createBrowserRouter([
@@ -12,6 +13,10 @@ const Router = () => {
     {
       path: '/ranking',
       element: <Ranking />,
+    },
+    {
+      path: '/history',
+      element: <History />,
     },
   ]);
 

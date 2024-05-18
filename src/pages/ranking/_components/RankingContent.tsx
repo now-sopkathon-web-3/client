@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { RANKING_DATA } from '../_constants/rankingData';
 import RankingButton from './RankingButton';
 
 interface RankingContentProps {
