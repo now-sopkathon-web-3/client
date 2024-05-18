@@ -163,16 +163,16 @@ const InputText = styled.div``;
 
 const UploadFile = styled.input`
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 335px;
+  height: 335px;
   opacity: 0;
   cursor: pointer;
 `;
 
 const ImagePreview = styled.img`
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 335px;
+  height: 335px;
   border-radius: 0.8rem;
   background: #e5e7eb;
 `;

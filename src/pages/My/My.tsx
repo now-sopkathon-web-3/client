@@ -84,7 +84,7 @@ const My = () => {
       </UpperWrapper>
 
       {renderComponent()}
-      <FloatingWrapper>
+      <FloatingWrapper onClick={() => navigate(`/record/${memberId}`)}>
         <FloatingIcon />
       </FloatingWrapper>
       <BottomSheet>
