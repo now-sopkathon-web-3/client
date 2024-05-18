@@ -1,7 +1,7 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 import Home from './pages/home/Home';
-import Record from '@pages/record/Record';
+import RecordPage from '@pages/record/RecordPage';
 import SuccessPage from '@pages/record/SuccessPage';
 import FailPage from '@pages/record/FailPage';
 
@@ -13,7 +13,7 @@ const Router = () => {
     },
     {
       path: '/record',
-      element: <Record />,
+      element: <RecordPage />,
     },
     {
       path: '/record/success',
