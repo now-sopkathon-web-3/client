@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import Icon from '@components/Icon';
-import { icons } from '@styles/icons';
+import BackIcon from '@assets/icn_back.svg';
 
 interface AppBarProps {
   title: string;
@@ -9,7 +8,7 @@ interface AppBarProps {
 function AppBar({ title }: AppBarProps) {
   return (
     <AppBarLayout>
-      <Icon icon={icons.back} />
+      <BackIcon />
       <AppBarTitle>{title}</AppBarTitle>
     </AppBarLayout>
   );
@@ -18,18 +17,20 @@ function AppBar({ title }: AppBarProps) {
 export default AppBar;
 
 const AppBarLayout = styled.div`
-  height: 5rem;
+  height: 7.6rem;
   align-items: center;
   display: flex;
   justify-content: space-between;
+  background-color: ${({ theme }) => theme.color.bg};
   padding-left: 2rem;
   background-color: none;
+  position: sticky;
 `;
 
 const AppBarTitle = styled.h1`
   font-family: ${({ theme }) => theme.fonts.title2};
   color: ${({ theme }) => theme.color.black};
-  position: absolute; /* 절대 위치 사용 */
-  left: 50%; /* 왼쪽에서 50% 위치 */
-  transform: translateX(-50%); /* 자신의 크기의 반만큼 왼쪽으로 이동 */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 `;
