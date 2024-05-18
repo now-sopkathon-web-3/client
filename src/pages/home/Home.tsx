@@ -21,7 +21,5 @@ const LogoImgBig = styled(Logo)`
 `;
 
 const BigText = styled.p`
-  font-size: 5.6rem;
-  font-weight: bold;
-  color: red;
+  ${({ theme }) => theme.fonts.head1};
 `;
