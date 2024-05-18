@@ -1,16 +1,18 @@
 import styled from 'styled-components';
 import RankingContent from './RankingContent';
 import { RANKING_DATA } from '../_constants/rankingData';
+import { useParams } from 'react-router-dom';
+import { RankingListProps, UserRank } from '@models/getRankingResponse';
 
-function RankingList() {
+function RankingList({ rank }: RankingListProps) {
   return (
     <RankingListLayout>
-      {RANKING_DATA.map((data, index) => (
+      {rank?.map((one: UserRank, index: number) => (
         <RankingContent
           rank={index + 1} // 순위는 인덱스 + 1
-          nickname={data.nickname}
-          foodIslandCount={data.foodIslandCount}
-          streak={data.streak}
+          nickname={one.nickname}
+          foodIslandCount={one.foodIslandCount}
+          streak={one.streak}
         />
       ))}
     </RankingListLayout>

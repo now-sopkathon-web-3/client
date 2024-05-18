@@ -2,11 +2,10 @@ import styled from 'styled-components';
 import RankingButton from './RankingButton';
 
 interface RankingContentProps {
-  //userId: number;
-  rank: number;
-  nickname: string;
-  foodIslandCount: number;
-  streak: number;
+  rank?: number;
+  nickname?: string;
+  foodIslandCount?: number;
+  streak?: number;
 }
 
 function RankingContent({ rank, nickname, foodIslandCount, streak }: RankingContentProps) {
@@ -47,7 +46,8 @@ const RankingContentName = styled.p`
 `;
 
 const ButtonWrapper = styled.div`
-  margin-left: 9.6rem;
   gap: 0.4rem;
   display: flex;
+  position: fixed;
+  right: 3rem;
 `;

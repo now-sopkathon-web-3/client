@@ -11,11 +11,11 @@ const Router = () => {
       element: <Home />,
     },
     {
-      path: '/ranking',
+      path: '/ranking/:id',
       element: <Ranking />,
     },
     {
-      path: '/history',
+      path: '/history/:id',
       element: <History />,
     },
   ]);

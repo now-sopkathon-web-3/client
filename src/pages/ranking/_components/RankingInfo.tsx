@@ -3,11 +3,10 @@ import RankingButton from './RankingButton';
 import RankingLogo from '@assets/ranking_logo.svg';
 
 interface RankingInfoProps {
-  //userId: number;
-  rank: number;
-  nickname: string;
-  foodIslandCount: number;
-  streak: number;
+  rank?: number;
+  nickname?: string;
+  foodIslandCount?: number;
+  streak?: number;
 }
 
 function RankingInfo({ rank, nickname, foodIslandCount, streak }: RankingInfoProps) {
@@ -56,6 +55,7 @@ const ButtonWrapper = styled.div`
   gap: 0.8rem;
   display: flex;
   margin-top: 0.9rem;
+  justify-content: end;
 `;
 
 const RankingInfoMy = styled.h2`
