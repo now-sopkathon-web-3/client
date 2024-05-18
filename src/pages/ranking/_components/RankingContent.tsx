@@ -14,8 +14,8 @@ function RankingContent({ id, name, islandNum, date }: RankingContentProps) {
     <RankingContentLayout>
       <RankingContentNum>{id}</RankingContentNum>
       <RankingContentName>{name}</RankingContentName>
-      <RankingContentIslandNum>섬 {islandNum}개</RankingContentIslandNum>
-      <RankingContentDate>{date}일째</RankingContentDate>
+      <RankingButton title={`섬 ${islandNum}개`} />
+      <RankingButton title={`${date}일째`} />
     </RankingContentLayout>
   );
 }

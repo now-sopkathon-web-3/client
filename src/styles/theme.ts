@@ -16,6 +16,7 @@ const color = {
   gray900: '#111827',
   main: '#09D17D',
   bg: '#A4E1F4',
+  sub: '#A4E1F4',
 };
 
 export type ColorType = typeof theme.color;
