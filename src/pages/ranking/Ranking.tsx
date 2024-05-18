@@ -19,6 +19,8 @@ function Ranking() {
 
       const data = response.data;
 
+      console.log('hi', data);
+
       setRank(data.myRank);
       setRankArr(data.rank);
     };
@@ -47,5 +49,4 @@ const RankingLayout = styled.div`
   width: 100vw;
   display: flex;
   flex-direction: column;
-  //padding-left: 2rem;
 `;
