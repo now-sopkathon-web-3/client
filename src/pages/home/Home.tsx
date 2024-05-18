@@ -16,8 +16,8 @@ const home = () => {
 export default home;
 
 const LogoImgBig = styled(Logo)`
-  width: 40rem;
-  height: 40rem;
+  width: 25rem;
+  height: 30rem;
 `;
 
 const BigText = styled.p`
