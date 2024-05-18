@@ -104,18 +104,18 @@ const Title = styled.p`
   color: #000;
   text-align: center;
   font-family: Inter;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 400;
   line-height: normal;
   margin-top: 2.9rem;
 `;
 
 const FileInfo = styled.input`
-  width: 335px;
-  height: 48px;
-  padding: 13px 24px;
-  border-radius: 8px;
-  border: 0.75px solid #9ca3af;
+  width: 33.5rem;
+  height: 4.8rem;
+  padding: 1.3rem 2.4rem;
+  border-radius: 0.8rem;
+  border: 0.075rem solid #9ca3af;
   background: #fff;
   margin-top: 1.2rem;
 `;
@@ -131,20 +131,20 @@ const ButtonContainer = styled.div`
 
 const Btn = styled.button<{ $isTrue: boolean; border: boolean }>`
   display: flex;
-  width: 161px;
-  height: 66px;
+  width: 16.1rem;
+  height: 6.6rem;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  border-radius: 8px;
-  border: 1px solid ${({ border, theme }) => (border ? theme.color.main : '#E72121')};
+  gap: 1rem;
+  border-radius: 0.8rem;
+  border: 0.1rem solid ${({ border, theme }) => (border ? theme.color.main : '#E72121')};
   color: ${({ $isTrue, theme }) => ($isTrue ? theme.color.white : theme.color.gray400)};
   background: ${({ $isTrue, border, theme }) => ($isTrue ? (border ? theme.color.main : '#E72121') : 'transparent')};
   font-family: Pretendard;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 600;
   line-height: 140%;
-  letter-spacing: 0.064px;
+  letter-spacing: 0.0064rem;
 `;
 
 const ImgContainer = styled.div`
@@ -152,9 +152,9 @@ const ImgContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 335px;
-  height: 335px;
-  border-radius: 8px;
+  width: 33.5rem;
+  height: 33.5rem;
+  border-radius: 0.8rem;
   background: #e5e7eb;
   margin-top: 1.2rem;
 `;
@@ -173,23 +173,23 @@ const ImagePreview = styled.img`
   position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 8px;
+  border-radius: 0.8rem;
   background: #e5e7eb;
 `;
 
 const UploadBtn = styled.button`
-  width: 335px;
-  height: 48px;
+  width: 33.5rem;
+  height: 4.8rem;
   justify-content: center;
   align-items: center;
-  border-radius: 8px;
+  border-radius: 0.8rem;
   background: #9ca3af;
   color: #fff;
   font-family: Pretendard;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 600;
   line-height: 140%;
-  letter-spacing: 0.064px;
+  letter-spacing: 0.0064rem;
   margin-top: 1.8rem;
 
   &:hover {

@@ -15,6 +15,7 @@ const RecordResult = (props: RecordResultProps) => {
   const handleHomeBtn = () => {
     navigate(`/${memberId}`);
   };
+
   return (
     <RecordResultWrapper>
       <StatusText>{content}</StatusText>
@@ -43,13 +44,10 @@ const StatusText = styled.p`
   margin-top: 7rem;
   text-align: center;
   color: #000;
-  text-align: center;
   font-family: Pretendard;
-  font-size: 20px;
-  font-style: normal;
+  font-size: 2rem;
   font-weight: 600;
-  line-height: 140%; /* 28px */
-
+  line-height: 140%;
   white-space: pre-wrap;
 `;
 
@@ -65,8 +63,6 @@ const StatusImgWrapper = styled.div`
 `;
 
 const HomeBtn = styled.button`
-  padding: 0, 2rem;
-
   display: flex;
   width: 33.5rem;
   height: 4.8rem;
@@ -77,17 +73,14 @@ const HomeBtn = styled.button`
   flex-shrink: 0;
   border-radius: 0.8rem;
   background: var(--main, #09d17d);
-
   margin-bottom: 3.6rem;
 `;
 
 const BtnText = styled.p`
   color: var(--gray-white, #fff);
   text-align: center;
-
   font-family: Pretendard;
   font-size: 1.6rem;
-  font-style: normal;
   font-weight: 600;
   line-height: 140%;
   letter-spacing: 0.064rem;
