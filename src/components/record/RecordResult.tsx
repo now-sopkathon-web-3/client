@@ -13,7 +13,7 @@ const RecordResult = (props: RecordResultProps) => {
   const navigate = useNavigate();
 
   const handleHomeBtn = () => {
-    navigate(`/${memberId}`);
+    navigate(`/My/${memberId}`);
   };
 
   return (
