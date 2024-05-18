@@ -42,7 +42,7 @@ const FONT = ({ family, weight, size, height, letterSpacing }: Font): string => 
 
 const fonts = {
   head1: FONT({
-    family: 'Pretendard',
+    family: 'Pretendard, sans-serif',
     size: 2.8,
     weight: 600,
     height: '140',
@@ -118,6 +118,7 @@ const fonts = {
     height: '140',
     letterSpacing: 0,
   }),
+
   number1: FONT({
     family: 'LOTTERIACHAB',
     size: 1.5,
@@ -125,6 +126,7 @@ const fonts = {
     height: '140',
     letterSpacing: 0,
   }),
+
   number2: FONT({
     family: 'LOTTERIACHAB',
     size: 2.8,

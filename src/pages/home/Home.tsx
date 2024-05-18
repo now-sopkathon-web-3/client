@@ -1,29 +1,11 @@
-// import Logo from '@assets/logo.svg';
-// import Icon from '@components/Icon';
-// import { icons } from '@styles/icons';
-// import { useEffect } from 'react';
-// import { getTestApi } from 'src/api';
-import styled from 'styled-components';
+import Login from './Login';
 
 const home = () => {
-  //   useEffect(() => {
-  //     const getTest = async () => {
-  //       const result = await getTestApi();
-  //       console.log(result);
-  //     };
-
-  //     getTest();
-  //   }, []);
-
   return (
-    <div>
-      <BigText>home</BigText>
-    </div>
+    <>
+      <Login />
+    </>
   );
 };
 
 export default home;
-
-const BigText = styled.p`
-  ${({ theme }) => theme.fonts.head1};
-`;
