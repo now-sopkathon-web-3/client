@@ -1,7 +1,9 @@
-import axios from 'axios';
-import { useState } from 'react';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
 import { styled as mStyled } from '@mui/material/styles';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import styled from 'styled-components';
 import MyIcon from '../../assets/MyIcon.svg';
 import FloatingIcon from '../../assets/floatingIcon.svg';
 import Main1_1 from '../../assets/main1-1.svg';
@@ -13,9 +15,6 @@ import Main2_3 from '../../assets/main2-3.svg';
 import Main3_1 from '../../assets/main3-1.svg';
 import Main3_2 from '../../assets/main3-2.svg';
 import Main3_3 from '../../assets/main3-3.svg';
-import styled from 'styled-components';
-import { useNavigate, useParams } from 'react-router-dom';
-import { useEffect } from 'react';
 // import { relative } from 'path';
 
 const My = () => {
