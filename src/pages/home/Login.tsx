@@ -70,7 +70,3 @@ const Btn = styled.button<{ length: number }>`
 
   background: ${({ length, theme }) => (length ? theme.color.main : theme.color.gray400)};
 `;
-
-const Number = styled.p`
-  ${({ theme }) => theme.fonts.number};
-`;

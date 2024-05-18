@@ -17,7 +17,6 @@ const color = {
   main: '#09D17D',
   sub: '#F0C419',
   bg: '#A4E1F4',
-  sub: '#F0C419',
 };
 
 export type ColorType = typeof theme.color;

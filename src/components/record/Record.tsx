@@ -1,8 +1,8 @@
-import React, { useState, ChangeEvent } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import Axios from 'src/api/config';
-import styled from 'styled-components';
 import Back from 'src/assets/icn_back.svg';
+import styled from 'styled-components';
 
 const Record: React.FC = () => {
   const { memberId } = useParams<{ memberId: string }>();
@@ -38,6 +38,7 @@ const Record: React.FC = () => {
       },
     })
       .then((result) => {
+        console.log(result);
         setFile(null);
         navigate(isSuccess ? `/record/success/${memberId}` : `/record/fail/${memberId}`);
       })
@@ -93,7 +94,7 @@ const RecordWrapper = styled.div`
   padding: 0 2rem;
 `;
 
-const BackIcon = styled(Back)`
+const BackIcon = styled(Back)<{ onClick: any }>`
   position: absolute;
   left: 2rem;
   top: 2.4rem;
