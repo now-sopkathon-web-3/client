@@ -1,23 +1,39 @@
 <div align="center">
 
-<h2> 맛있으면, eat’s 0k </h2>
+<h2> eat’s 0k </h2>
 
-<img src=""  alt="서비스대표-이미지" />
-<div>목표한 식단을 꾸준히 지키는 것에 대한 부담을 가지는 mz세대들에게
+<img width="300" height="300" src="https://github.com/now-sopkathon-web-3/client/assets/101500670/10593278-e883-4f56-83ac-013b97f3aae6"  alt="서비스대표-이미지" />
+<div>맛있으면, eat’s 0k!</br>목표한 식단을 꾸준히 지키는 것에 대한 부담을 가지는 mz세대들에게
 꾸준히 식단 기록을 가능하게 해주는 서비스</div>
 
 </div>
 
 <h2> ✨주요 기능 </h2>
 
-<h3> 1️⃣ 이미지 업로드 </h3>
-<img src=""  alt="기능1-대표이미지" />
-<div ><strong> 이미지 업로드 </strong> 그 날 먹은 음식 사진을 업로드하여 기록한다  <br/></div>
+<h3> 1 기록하기 </h3>
+<img width="200" src="https://github.com/now-sopkathon-web-3/client/assets/101500670/e1414a38-7433-467a-85f8-6b9d862697db"  alt="기능1-대표이미지" />
+<div ><strong> 기록하기 </strong> 그 날 먹은 음식 사진을 업로드하여 기록한다  <br/></div>
 
 
-<h3> 2️⃣ 이미지 아카이빙 </h3>
+<h3> 2 이미지 아카이빙 </h3>
 <img width="200" src="https://github.com/now-sopkathon-web-3/client/assets/151596186/df4e0325-ef53-4ff7-a320-cbe2e59dab3e"  alt="기능1-대표이미지" />
 <div ><strong> 이미지 아카이빙 </strong> 꾸준하게 누적된 이미지만큼 마이페이지의 음식을 획득할 수 있다 <br/></div>
+
+
+<h3> 3 로그인 </h3>
+<img width="200" src="https://github.com/now-sopkathon-web-3/client/assets/101500670/76c678d3-8b11-48c2-adfa-efea96435f1a"  alt="기능1-대표이미지" />
+<div ><strong> 로그인 </strong> 유저 이름을 생성하여 로그인할 수 있다. <br/></div>
+
+
+<h3> 4 랭킹 </h3>
+<img width="200" src="https://github.com/now-sopkathon-web-3/client/assets/101500670/02b14367-dc26-46dc-b837-4fa2755eb7ed"  alt="기능1-대표이미지" />
+<div ><strong> 랭킹 </strong> 랭킹 페이지의 다른 유저의 연속 누적 일수를 비교하며 동기부여를 받을 수 있다. <br/></div>
+
+
+<h3> 5 히스토리 </h3>
+<img width="200" src="https://github.com/now-sopkathon-web-3/client/assets/101500670/b9ab6043-a35c-495b-be4e-f9e0daacadc2"  alt="기능1-대표이미지" />
+<div ><strong> 히스토리 </strong> 언제 어떤 음식을 먹었는지 히스토리 뷰를 통해 아카이빙할 수 있다. <br/></div>
+
 
 
 <h2> 👥 Team </h2>
@@ -55,30 +71,16 @@
     </tr>
     <tr align="center">
        <td>
-            로그인/히스토리 뷰 <br/>
+            로그인 뷰 <br/>
       </td>
        <td>
             사진 업로드 뷰 <br/>
       </td>
        <td>
-            랭킹 뷰 <br/>
+            랭킹/히스토리 뷰 <br/>
       </td>
       <td>
             홈 뷰 <br/>
-      </td>
-    </tr>
-  	<tr align="center">
-       <td>
-            (역할분담) <br/>
-      </td>
-       <td>
-            (역할분담) <br/>
-      </td>
-       <td>
-            (역할분담) <br/>
-      </td>
-       <td>
-            (역할분담) <br/>
       </td>
     </tr>
 </table>
@@ -182,3 +184,5 @@ rename : 파일 혹은 폴더명 변경
 
 
 <h3>우리의 꼬질한 After</h3>
+<img  src="https://github.com/now-sopkathon-web-3/client/assets/101500670/ff39c0c3-87d9-456b-8dfc-8450182b3903"  alt="서비스대표-이미지" />
+
