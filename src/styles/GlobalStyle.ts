@@ -4,6 +4,13 @@ import reset from 'styled-reset';
 const GlobalStyle = createGlobalStyle`
   ${reset}
 
+  @font-face {
+    font-family: 'LOTTERIACHAB';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
   html,
   body,
   div,

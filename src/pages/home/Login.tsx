@@ -1,14 +1,28 @@
-import { useEffect } from 'react';
+import Char from '@assets/logo.svg';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { loginApi } from 'src/api';
 import styled from 'styled-components';
 
 const Login = () => {
-  useEffect(() => {}, []);
+  const navigate = useNavigate();
+  const [username, setUsername] = useState('');
+
+  const handleLogin = async () => {
+    const result = await loginApi(username);
+    const memberId = result?.data?.userId;
+
+    if (memberId) navigate(`my/${memberId}`);
+  };
 
   return (
     <Container>
+      <CharImg />
       <Text>이름을 입력해주세요</Text>
-      <Input />
-      <Btn>로그인하기</Btn>
+      <Input onChange={(e) => setUsername(e.target.value)} value={username} placeholder="이름을 입력해주세요!" />
+      <Btn length={username.length} onClick={handleLogin}>
+        로그인
+      </Btn>
     </Container>
   );
 };
@@ -18,33 +32,45 @@ export default Login;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   height: 100vh;
 `;
 
-const Text = styled.p`
-  margin-left: 2rem;
-  margin-top: 22.5rem;
-  color: #000;
+const CharImg = styled(Char)`
+  margin-top: 8rem;
+`;
 
-  /* Text/Head 2 */
-  font-family: Pretendard;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 140%; /* 33.6px */
+const Text = styled.p`
+  margin-top: 2.4rem;
+  color: #000;
+  ${({ theme }) => theme.fonts.head2};
 `;
 
 const Input = styled.input`
-  width: 235px;
-  height: 49px;
+  margin-top: 1.4rem;
+  width: 33.5rem;
+  height: 4.8rem;
+  padding: 13px 24px;
+
+  border-radius: 8px;
+  border: 0.75px solid ${({ theme }) => theme.color.gray400};
+  background: ${({ theme }) => theme.color.white};
 `;
 
-const Btn = styled.button`
-  width: 165px;
-  height: 21px;
-  color: black;
-  background-color: gray;
+const Btn = styled.button<{ length: number }>`
+  margin-top: 1.2rem;
+  width: 335px;
+  height: 48px;
+  padding: 11px 133px;
 
-  border-radius: 50px;
-  background: #d9d9d9;
+  color: ${({ theme }) => theme.color.white};
+  ${({ theme }) => theme.fonts.subtitle1};
+
+  border-radius: 8px;
+
+  background: ${({ length, theme }) => (length ? theme.color.main : theme.color.gray400)};
+`;
+
+const Number = styled.p`
+  ${({ theme }) => theme.fonts.number};
 `;
