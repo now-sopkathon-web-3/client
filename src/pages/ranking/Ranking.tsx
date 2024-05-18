@@ -4,7 +4,7 @@ import RankingContent from './_components/RankingContent';
 function Ranking() {
   return (
     <RankingLayout>
-      <RankingContent name="안녕" />
+      <RankingContent name="이채원" islandNum={1} date={11} />
     </RankingLayout>
   );
 }
