@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import AppBar from '@components/AppBar';
+import styled from 'styled-components';
 import HistoryList from './_components/HistoryList';
 
 function History() {

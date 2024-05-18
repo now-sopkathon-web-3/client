@@ -1,5 +1,4 @@
 import RecordResult from '@components/record/RecordResult';
-import styled from 'styled-components';
 import SuccessImg from 'src/pages/record/img_success_babal@3x.png';
 
 const SuccessPage = () => {

@@ -1,11 +1,11 @@
-import styled from 'styled-components';
-import RankingList from './_components/RankingList';
 import AppBar from '@components/AppBar';
-import RankingInfo from './_components/RankingInfo';
-import { useParams } from 'react-router-dom';
+import { UserRank } from '@models/getRankingResponse';
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { getRanking } from 'src/api/getRanking';
-import { UserRankResponse, UserRank } from '@models/getRankingResponse';
+import styled from 'styled-components';
+import RankingInfo from './_components/RankingInfo';
+import RankingList from './_components/RankingList';
 
 function Ranking() {
   const { id: userId } = useParams<{ id: string }>();

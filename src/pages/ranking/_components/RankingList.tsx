@@ -1,8 +1,6 @@
+import { RankingListProps, UserRank } from '@models/getRankingResponse';
 import styled from 'styled-components';
 import RankingContent from './RankingContent';
-import { RANKING_DATA } from '../_constants/rankingData';
-import { useParams } from 'react-router-dom';
-import { RankingListProps, UserRank } from '@models/getRankingResponse';
 
 function RankingList({ rank }: RankingListProps) {
   return (

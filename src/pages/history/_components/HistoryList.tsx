@@ -1,9 +1,8 @@
-import styled from 'styled-components';
+import { History } from '@models/getHistoryResponse';
 import { useEffect, useState } from 'react';
-import HistoryContent from './HistoryContent';
-import { useParams } from 'react-router-dom';
 import { getHistory } from 'src/api/getHistory';
-import { HistoryResponse, History } from '@models/getHistoryResponse';
+import styled from 'styled-components';
+import HistoryContent from './HistoryContent';
 
 function HistoryList() {
   //const { id: userId } = useParams<{ id: string }>();

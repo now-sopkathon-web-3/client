@@ -1,7 +1,7 @@
-import Axios from './config';
 import { isAxiosError } from 'axios';
+import Axios from './config';
 
-export const getRanking = async (userId: number) => {
+export const getRanking = async (userId: any) => {
   try {
     const response = await Axios.get('/members/rank', {
       headers: {
