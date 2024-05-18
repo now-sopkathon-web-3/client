@@ -2,19 +2,22 @@ import styled from 'styled-components';
 import RankingButton from './RankingButton';
 
 interface RankingContentProps {
-  id: number;
-  name: string;
-  islandNum: number;
-  date: number;
+  //userId: number;
+  rank: number;
+  nickname: string;
+  foodIslandCount: number;
+  streak: number;
 }
 
-function RankingContent({ id, name, islandNum, date }: RankingContentProps) {
+function RankingContent({ rank, nickname, foodIslandCount, streak }: RankingContentProps) {
   return (
     <RankingContentLayout>
-      <RankingContentNum>{id}</RankingContentNum>
-      <RankingContentName>{name}</RankingContentName>
-      <RankingButton title={`섬 ${islandNum}개`} />
-      <RankingButton title={`${date}일째`} />
+      <RankingContentNum>{rank}</RankingContentNum>
+      <RankingContentName>{nickname}</RankingContentName>
+      <ButtonWrapper>
+        <RankingButton title={`획득 메뉴  ${foodIslandCount}개`} colorType="green" />
+        <RankingButton title={`${streak}일째`} colorType="yellow" />
+      </ButtonWrapper>
     </RankingContentLayout>
   );
 }
@@ -24,18 +27,27 @@ export default RankingContent;
 const RankingContentLayout = styled.div`
   display: flex;
   align-items: center;
-  height: 5rem;
-  background-color: ${({ theme }) => theme.color.gray200};
+  width: 33.5rem;
+  height: 6.3rem;
+  background-color: ${({ theme }) => theme.color.white};
+  border-bottom: 0.1rem solid ${({ theme }) => theme.color.gray100};
 `;
 
-const RankingContentNum = styled.div`
-  width: 3rem;
-  height: 3rem;
-  background-color: ${({ theme }) => theme.color.gray600};
+const RankingContentNum = styled.p`
+  width: 3.3rem;
+  ${({ theme }) => theme.fonts.number1};
+  color: ${({ theme }) => theme.color.black};
+  margin-left: 1rem;
 `;
 
-const RankingContentName = styled.p``;
+const RankingContentName = styled.p`
+  ${({ theme }) => theme.fonts.body4};
+  color: ${({ theme }) => theme.color.black};
+  margin-left: 0.8rem;
+`;
 
-const RankingContentIslandNum = styled.p``;
-
-const RankingContentDate = styled.p``;
+const ButtonWrapper = styled.div`
+  margin-left: 9.6rem;
+  gap: 0.4rem;
+  display: flex;
+`;

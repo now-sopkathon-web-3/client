@@ -18,7 +18,6 @@ const HistoryListLayout = styled.div`
   display: grid;
   gap: 1.2rem;
   width: 100%;
-  //margin-top: 1.2rem;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   margin: 8.8rem auto;

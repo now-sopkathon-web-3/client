@@ -3,7 +3,7 @@ import { isAxiosError } from 'axios';
 
 export const getRanking = async () => {
   try {
-    const response = await Axios.get('/todos/1');
+    const response = await Axios.get('/members/rank');
 
     return response.data;
   } catch (error) {

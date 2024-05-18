@@ -16,7 +16,7 @@ const color = {
   gray900: '#111827',
   main: '#09D17D',
   bg: '#A4E1F4',
-  sub: '#A4E1F4',
+  sub: '#F0C419',
 };
 
 export type ColorType = typeof theme.color;
@@ -114,6 +114,20 @@ const fonts = {
     family: 'Pretendard',
     size: 1,
     weight: 400,
+    height: '140',
+    letterSpacing: 0,
+  }),
+  number1: FONT({
+    family: 'LOTTERIACHAB',
+    size: 1.5,
+    weight: 400,
+    height: '140',
+    letterSpacing: 0,
+  }),
+  number2: FONT({
+    family: 'LOTTERIACHAB',
+    size: 2.8,
+    weight: 600,
     height: '140',
     letterSpacing: 0,
   }),

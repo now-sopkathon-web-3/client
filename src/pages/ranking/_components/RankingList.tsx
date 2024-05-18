@@ -6,7 +6,12 @@ function RankingList() {
   return (
     <RankingListLayout>
       {RANKING_DATA.map((data, index) => (
-        <RankingContent key={data.id} id={index + 1} name={data.name} islandNum={data.island} date={data.date} />
+        <RankingContent
+          rank={index + 1} // 순위는 인덱스 + 1
+          nickname={data.nickname}
+          foodIslandCount={data.foodIslandCount}
+          streak={data.streak}
+        />
       ))}
     </RankingListLayout>
   );
@@ -15,6 +20,11 @@ function RankingList() {
 export default RankingList;
 
 const RankingListLayout = styled.div`
-  max-height: 18rem;
   overflow-y: auto;
+  //max-width: 56.7rem;
+  margin-top: 0.6rem;
+  width: 33.5rem;
+  overflow-y: auto;
+  margin-bottom: 2.4rem;
+  margin-left: 2rem;
 `;

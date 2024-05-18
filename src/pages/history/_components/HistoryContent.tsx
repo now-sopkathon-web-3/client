@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import image_1 from '@assets/image_1.jpeg';
 
 interface HistoryContentProps {
   createdAt: string;
@@ -39,13 +38,13 @@ const HistoryContentLayout = styled.article`
 `;
 
 const HistoryContentDate = styled.p`
-  font-family: ${({ theme }) => theme.fonts.caption};
+  ${({ theme }) => theme.fonts.caption};
   color: ${({ theme }) => theme.color.gray900};
   margin-top: 1.4rem;
 `;
 
 const HistoryContentFood = styled.p`
-  font-family: ${({ theme }) => theme.fonts.body2};
+  ${({ theme }) => theme.fonts.body2};
   color: ${({ theme }) => theme.color.gray900};
   margin-top: 0.2rem;
 `;
