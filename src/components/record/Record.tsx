@@ -79,7 +79,9 @@ const Record: React.FC = () => {
         <UploadFile type="file" accept="image/gif, image/jpeg, image/png" onChange={handleImg} />
         {image && <ImagePreview src={image} alt="Uploaded Preview" />}
       </ImgContainer>
-      <UploadBtn onClick={() => handleImageUpload(success)}>등록</UploadBtn>
+      <UploadBtn $image={!!image} onClick={() => handleImageUpload(success)}>
+        등록
+      </UploadBtn>
     </RecordWrapper>
   );
 };
@@ -178,13 +180,13 @@ const ImagePreview = styled.img`
   background: #e5e7eb;
 `;
 
-const UploadBtn = styled.button`
+const UploadBtn = styled.button<{ $image: boolean }>`
   width: 33.5rem;
   height: 4.8rem;
   justify-content: center;
   align-items: center;
   border-radius: 0.8rem;
-  background: #9ca3af;
+  background: ${({ theme, $image }) => ($image ? theme.color.main : '#e5e7eb')};
   color: #fff;
   font-family: Pretendard;
   font-size: 1.6rem;
