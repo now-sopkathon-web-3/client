@@ -56,7 +56,7 @@ const Record: React.FC = () => {
   };
 
   const handleHomeBtn = () => {
-    navigate(`/${memberId}`);
+    navigate(`/my/${memberId}`);
   };
 
   return (
