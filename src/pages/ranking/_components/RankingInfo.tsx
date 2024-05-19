@@ -35,11 +35,11 @@ const RankingLogoStyled = styled(RankingLogo)`
 `;
 const RankingInfoLayout = styled.div`
   background-color: ${({ theme }) => theme.color.gray50};
-  width: 33.5rem;
+  width: 34.5rem;
   height: 9.5rem;
   border-radius: 12px;
   margin-top: 7.6rem;
-  padding-left: 2rem;
+  padding-left: 1.5rem;
   display: flex;
   margin-left: 2rem;
 `;
