@@ -9,6 +9,8 @@ const Login = () => {
   const [username, setUsername] = useState('');
 
   const handleLogin = async () => {
+    if (!username) return;
+
     const result = await loginApi(username);
     const memberId = result?.data?.userId;
 

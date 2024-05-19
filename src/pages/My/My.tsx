@@ -46,6 +46,8 @@ const My = () => {
 
   const renderComponent = () => {
     switch (streak % 10) {
+      case 0:
+        return <Main1 />;
       case 1:
         return <Main1 />;
       case 2:
