@@ -62,6 +62,7 @@ const RankingInfoMy = styled.h2`
   ${({ theme }) => theme.fonts.title2};
   color: ${({ theme }) => theme.color.gray900};
   flex-direction: row;
+  font-size: 16px;
 `;
 
 const RankSpan = styled.span`
