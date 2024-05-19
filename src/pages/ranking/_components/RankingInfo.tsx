@@ -1,6 +1,6 @@
+import RankingLogo from '@assets/ranking_logo.svg';
 import styled from 'styled-components';
 import RankingButton from './RankingButton';
-import RankingLogo from '@assets/ranking_logo.svg';
 
 interface RankingInfoProps {
   rank?: number;
@@ -31,7 +31,7 @@ function RankingInfo({ rank, nickname, foodIslandCount, streak }: RankingInfoPro
 export default RankingInfo;
 
 const RankingLogoStyled = styled(RankingLogo)`
-  margin-left: 1.1rem;
+  /* margin-left: 1.1rem; */
 `;
 const RankingInfoLayout = styled.div`
   background-color: ${({ theme }) => theme.color.gray50};
