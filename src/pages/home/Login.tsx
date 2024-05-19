@@ -1,4 +1,4 @@
-import Char from '@assets/logo.svg';
+import Char from '@assets/1.svg';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { loginApi } from 'src/api';
